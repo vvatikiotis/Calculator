@@ -20,6 +20,26 @@
 }
 
 //
+- (void)dotPressed:(UIButton *)sender
+{
+    NSString *displayString = [display text];
+
+    NSRange range = [displayString rangeOfString:@"."];
+    if (range.location == NSNotFound)
+    {
+        [display setText:[[display text] stringByAppendingString:@"."]];
+        userIsInTheMiddleOfTypingANumber = YES;
+    }
+}
+
+//
+- (void)piPressed:(UIButton *)sender
+{
+    [display setText:@"3.141592653589793"];
+    [[self brain] setOperand:[[display text] doubleValue]];
+}
+
+//
 - (void)digitPressed:(UIButton *)sender
 {
     NSString *digit = [[sender titleLabel] text]; 
@@ -60,7 +80,7 @@
     } else if ([memOperation isEqual:@"recall"])
     {
         double memory = [[self brain] performOperation:memOperation];
-        [display setText:[NSString stringWithFormat:@"%f", memory]];
+        [display setText:[NSString stringWithFormat:@"%g", memory]];
     }
 
     double result = [[self brain] memory];

@@ -12,6 +12,7 @@
 {
     double operand;
     double memory;
+    
     double waitingOperand;
     NSString *waitingOperation;
 }

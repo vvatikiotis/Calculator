@@ -24,13 +24,11 @@
     if ([@"+" isEqual:waitingOperation]) 
     {
         operand = waitingOperand + operand;
-    } else if ([@"-" isEqual:waitingOperation]) 
+    } 
+    else if ([@"-" isEqual:waitingOperation]) 
     {
         operand = waitingOperand - operand;
-    } else if ([@"-" isEqual:waitingOperation]) 
-    {
-        operand = waitingOperand - operand;
-    }
+    } 
     else if ([@"*" isEqual:waitingOperation]) 
     {
         operand = waitingOperand * operand;
@@ -40,7 +38,7 @@
         if (operand) {
             operand = waitingOperand / operand;
         }
-    }            
+    }
 }
 
 // 

@@ -18,7 +18,9 @@
 }
 
 -(IBAction)digitPressed:(UIButton *)sender;
+-(IBAction)dotPressed:(UIButton *)sender;
 -(IBAction)operationPressed:(UIButton *)sender;
 -(IBAction)memoryButtonPressed:(UIButton *)sender;
+-(IBAction)piPressed:(UIButton *)sender;
 
 @end
