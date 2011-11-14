@@ -13,8 +13,9 @@
 		F650B1D514685B9500C6E372 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F650B1D314685B9500C6E372 /* InfoPlist.strings */; };
 		F650B1D714685B9500C6E372 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F650B1D614685B9500C6E372 /* main.m */; };
 		F650B1DB14685B9500C6E372 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F650B1DA14685B9500C6E372 /* AppDelegate.m */; };
-		F650B1DE14685B9500C6E372 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F650B1DD14685B9500C6E372 /* ViewController.m */; };
-		F650B1E114685B9500C6E372 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F650B1DF14685B9500C6E372 /* ViewController.xib */; };
+		F650B1DE14685B9500C6E372 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F650B1DD14685B9500C6E372 /* CalculatorViewController.m */; };
+		F650B1E114685B9500C6E372 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F650B1DF14685B9500C6E372 /* CalculatorViewController.xib */; };
+		F650B1E9146861C200C6E372 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = F650B1E8146861C200C6E372 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		F650B1CA14685B9500C6E372 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F650B1CC14685B9500C6E372 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F650B1CE14685B9500C6E372 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F650B1D214685B9500C6E372 /* Calculator-Info.plist */ = {isa = PBXFileReference; path = "Calculator-Info.plist"; sourceTree = "<group>"; };
+		F650B1D214685B9500C6E372 /* Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calculator-Info.plist"; sourceTree = "<group>"; };
 		F650B1D414685B9500C6E372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F650B1D614685B9500C6E372 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F650B1D814685B9500C6E372 /* Calculator-Prefix.pch */ = {isa = PBXFileReference; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
-		F650B1D914685B9500C6E372 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F650B1D814685B9500C6E372 /* Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		F650B1D914685B9500C6E372 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F650B1DA14685B9500C6E372 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F650B1DC14685B9500C6E372 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		F650B1DD14685B9500C6E372 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F650B1E014685B9500C6E372 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		F650B1DC14685B9500C6E372 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		F650B1DD14685B9500C6E372 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		F650B1E014685B9500C6E372 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CalculatorViewController.xib; sourceTree = "<group>"; };
+		F650B1E7146861C200C6E372 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		F650B1E8146861C200C6E372 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +82,11 @@
 			children = (
 				F650B1D914685B9500C6E372 /* AppDelegate.h */,
 				F650B1DA14685B9500C6E372 /* AppDelegate.m */,
-				F650B1DC14685B9500C6E372 /* ViewController.h */,
-				F650B1DD14685B9500C6E372 /* ViewController.m */,
-				F650B1DF14685B9500C6E372 /* ViewController.xib */,
+				F650B1E7146861C200C6E372 /* CalculatorBrain.h */,
+				F650B1E8146861C200C6E372 /* CalculatorBrain.m */,
+				F650B1DC14685B9500C6E372 /* CalculatorViewController.h */,
+				F650B1DD14685B9500C6E372 /* CalculatorViewController.m */,
+				F650B1DF14685B9500C6E372 /* CalculatorViewController.xib */,
 				F650B1D114685B9500C6E372 /* Supporting Files */,
 			);
 			path = Calculator;
@@ -149,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F650B1D514685B9500C6E372 /* InfoPlist.strings in Resources */,
-				F650B1E114685B9500C6E372 /* ViewController.xib in Resources */,
+				F650B1E114685B9500C6E372 /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +167,8 @@
 			files = (
 				F650B1D714685B9500C6E372 /* main.m in Sources */,
 				F650B1DB14685B9500C6E372 /* AppDelegate.m in Sources */,
-				F650B1DE14685B9500C6E372 /* ViewController.m in Sources */,
+				F650B1DE14685B9500C6E372 /* CalculatorViewController.m in Sources */,
+				F650B1E9146861C200C6E372 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,12 +183,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F650B1DF14685B9500C6E372 /* ViewController.xib */ = {
+		F650B1DF14685B9500C6E372 /* CalculatorViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F650B1E014685B9500C6E372 /* en */,
 			);
-			name = ViewController.xib;
+			name = CalculatorViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
